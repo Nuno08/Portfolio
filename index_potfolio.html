@@ -17,173 +17,72 @@
             crossorigin="anonymous"
         />
         <style>
-            .sidebar {
-                height: 100%;
-                width: 0;
-                position: fixed;
-                z-index: 1;
-                top: 0;
-                left: 0;
-                background-color: #111;
-                overflow-x: hidden;
-                transition: 0.5s;
-                padding-top: 60px;
-            }
-
-            .sidebar a {
-                padding: 8px 8px 8px 32px;
-                text-decoration: none;
-                font-size: 25px;
-                color: #818181;
-                display: block;
-                transition: 0.3s;
-            }
-
-            .sidebar a:hover {
-                color: #f1f1f1;
-            }
-
-            .sidebar .closebtn {
-                position: absolute;
-                top: 0;
-                right: 25px;
-                font-size: 36px;
-                margin-left: 50px;
-            }
-
-            .openbtn {
-                cursor: pointer;
-                background-color: #111;
-                padding: 10px 15px;
-                border: none;
-                right: 5%;
-            }
-
-            .openbtn:hover {
-                background-color: #444;
-                }
-
-            #main {
-                transition: margin-left .5s;
-                padding: 16px;
-            }
-
             .footer{
-                background-color:#111;
+                background-color:#007bff;
+                color: white;
+                text-align: center;
+                padding: 1rem 0;
                 position: fixed;
+                bottom: 0;
                 width: 100%;
-                bottom: 0px;
-                color: #f1f1f1;
             }
             .body{
-                margin-bottom: 70%;
+                font-family: 'Poppins', sans-serif;
+                background-color: #f8f9fa;
+                color: #333;
             }
-            #myBtn {
-                display: none;
-                position: fixed;
-                z-index: 1;
-                cursor: pointer;
-            }
-            .letra{
-                font: sans-serif;
-                color: #333333;
-                margin-left: 20px;
-            }
-            ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                border: 1px solid #e7e7e7;
-                background-color: #f3f3f3;
-             }
-
-            li {
-                float: left;
-            }
-
-            li a {
-                display: block;
-                color: #666;
+            .intro {
                 text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
+                padding: 5rem 1rem;
+                max-width: 800px;
+                margin: auto;
             }
-
-            li a:hover {
-                background-color: #ddd;
+            .intro h2 {
+                font-size: 2.5rem;
+                font-weight: 600;
             }
-            /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-            @media screen and (max-height: 450px) {
-                .sidebar {padding-top: 15px;}
-                .sidebar a {font-size: 18px;}
+            .navbar {
+                background-color: #007bff;
+                padding: 1rem;
+            }
+            .navbar a {
+                color: white;
+                font-weight: 600;
+                transition: 0.3s;
+            }
+            .navbar a:hover {
+                color: #f8f9fa;
+                text-decoration: underline;
             }
         </style>
     </head>
 
-    <body class="body">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About me</a></li>
-            <li><a href="#">Projetos</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-
-        <div id="mySidebar" class="sidebar">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-            <a href="#">Home</a>
-            <a href="#">About me</a>
-            <a href="#">Projetos</a>
-            <a href="#">Contact</a>
-        </div>
-          
-        <div id="main">
-            <button id="myBtn" class="openbtn" onclick="openNav()"><img src="burger.png" alt="menu hamburguer" style="width:70px;height:70px;"></button>  
-        </div>
-        <div id="content" class="content">
-            <h2 class="letra">Desenvolvedor Full Stack júnior,<br> focado em criar soluções eficientes e inovadoras,<br> com uma forte vontade de aprender e crescer<br> em todas as etapas do desenvolvimento de software.</h1>
-        </div>
+    <body>
+         <!-- Navbar -->
+         <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Meu Portfólio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Sobre Mim</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Projetos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="intro">
+            <h2>Desenvolvedor Full Stack Júnior</h2>
+            <p>Focado em criar soluções eficientes e inovadoras, com uma forte vontade de aprender e crescer em todas as etapas do desenvolvimento de software.</p>
+        </section>
         <footer id="footer" class="footer">
             <p>&copy; code by Nuno Oliveira</p>
         </footer>
         
-        <script>
-            let mybutton = document.getElementById("myBtn");
-            let nav = document.getElementById("nav");
-
-            window.onscroll = function() {scrollFunction()};
-
-            function scrollFunction() {
-                if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
-                mybutton.style.display = "block";
-                } else {
-                mybutton.style.display = "none";
-                }
-            }
-            function openNav() {
-                let h = window.innerHeight;
-                if(h>450){
-                    document.getElementById("mySidebar").style.width = "250px";
-                    document.getElementById("main").style.display = "none";
-                    document.getElementById("content").style.marginLeft = "250px";
-                    document.getElementById("footer").style.marginLeft = "250px";
-
-                }else{
-                    document.getElementById("mySidebar").style.width = "170px";
-                    document.getElementById("main").style.display = "none";
-                    document.getElementById("content").style.marginLeft = "170px";
-                    document.getElementById("footer").style.marginLeft = "170px";
-                }
-            }
-            
-            function closeNav() {
-              document.getElementById("mySidebar").style.width = "0";
-              document.getElementById("main").style.display = "block";
-              document.getElementById("content").style.marginLeft = "0";
-              document.getElementById("footer").style.marginLeft = "0";
-
-            }
-            </script>
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
