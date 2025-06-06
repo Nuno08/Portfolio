@@ -16,9 +16,14 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="favicon_io/site.webmanifest">
         <style>
             .footer{
-                background-color:#007bff;
+                background-color:#343a40;
                 color: white;
                 text-align: center;
                 padding: 1rem 0;
@@ -26,15 +31,19 @@
                 bottom: 0;
                 width: 100%;
             }
-            .body{
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
                 font-family: 'Poppins', sans-serif;
                 background-color: #f8f9fa;
                 color: #333;
             }
             .intro {
                 text-align: center;
-                padding: 2.5rem 1rem;
+                padding: 2.9rem 1rem;
                 max-width: 800px;
+                color: white;
                 margin: auto;
             }
             .intro h2 {
@@ -46,7 +55,7 @@
                 font-weight: 500;
             }
             .navbar {
-                background-color: #007bff;
+                background-color: #343a40;
                 padding: 1rem;
             }
             .navbar a {
@@ -55,10 +64,17 @@
                 transition: 0.3s;
             }
             .navbar a:hover {
-                color: #f8f9fa;
+                color: #28a745;
                 text-decoration: underline;
             }
-        </style>
+            .hero-image {
+                min-height: 85vh;
+                background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("hero2.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding: 4rem;
+            }
         </style>
     </head>
 
@@ -66,29 +82,31 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="#">Meu Portfólio</a>
+                <a class="navbar-brand" href="index_portfolio.html">Meu Portfólio</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="index_portfolio.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="aboutMe.html">Sobre Mim</a></li>
+                        <li class="nav-item"><a class="nav-link" href="aboutMe.html">Sobre mim</a></li>
                         <li class="nav-item"><a class="nav-link" href="projetos.html">Projetos</a></li>
                         <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <section class="intro">
-            <h2>Contacto</h2>
-            <p>Telemovel : 960328740</p>
-            <p>Email: nunooliveira08@hotmail.com</p>
-        </section>
-        <section class="intro">
-            <p>Para mais informação baixar o curriculo:</p>
-            <a href="contacto.php" download class="btn btn-primary">Baixar</a>
-        </section>
+        <div class="hero-image">
+            <section class="intro">
+                <h2>Contacto</h2>
+                <p>Telemovel : 960328740</p>
+                <p>Email : nunooliveira08@hotmail.com</p>
+            </section>
+            <section class="intro">
+                <p>Para mais informação baixar o curriculo:</p>
+                <a href="contacto.php" download class="btn btn-primary">Baixar</a>
+            </section>
+        </div>
         <footer id="footer" class="footer">
             <p>&copy; code by Nuno Oliveira</p>
         </footer>
