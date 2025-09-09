@@ -23,91 +23,47 @@
         <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
         <link rel="manifest" href="favicon_io/site.webmanifest">
-        <style>
-            .footer{
-                background-color:#343a40;
-                color: white;
-                text-align: center;
-                padding: 1rem 0;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-            }
-            html, body {
-                height: 100%;
-                margin: 0;
-                padding: 0;
-                font-family: 'Poppins', sans-serif;
-                background-color: #f8f9fa;
-                color: #333;
-            }
-            .intro {
-                text-align: center;
-                padding: 5rem 1rem;
-                max-width: 800px;
-                color: white;
-                margin: auto;
-            }
-            .intro h2 {
-                font-size: 2.5rem;
-                font-weight: 600;
-            }
-            .navbar {
-                background-color: #343a40;
-                padding: 1rem;
-            }
-            .navbar a {
-                color: white;
-                font-weight: 600;
-                transition: 0.3s;
-            }
-            .navbar a:hover {
-                color: #28a745;
-                text-decoration: underline;
-            }
-            .hero-image {
-                min-height: 85vh;
-                background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("hero2.jpg");
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                padding: 4rem 0;   
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-        </style>
+        <link rel="stylesheet" href="assets/css/main.css">
+         <!-- React e ReactDOM via CDN -->
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <!-- Babel para interpretar JSX -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     </head>
 
-    <body>
+    <body class="index">
          <!-- Navbar -->
          <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="index_portfolio.html">Meu Portfólio</a>
+                <a class="navbar-brand" href="index_portfolio.html" id="headingLogoIndex" id="anchorLogoIndex">Meu Portfólio</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index_portfolio.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="aboutMe.html">Sobre mim</a></li>
-                        <li class="nav-item"><a class="nav-link" href="projetos.html">Projetos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index_portfolio.html" id="liHome">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="aboutMe.html" id="liAboutMe">Sobre mim</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projetos.html" id="liProjects">Projetos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html" id="liContact">Contacto</a></li>
+                        <li class="nav-item"><button id="btnPT"><img src="assets/images/PT.png" alt="Portugal Flag">PT</button></li>
+                        <li class="nav-item"><button id="btnEN"><img src="assets/images/EN.png" alt="United Kindom Flag">En</button></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <div class="hero-image">
             <section class="intro">
-                <h2>Desenvolvedor Full Stack Júnior</h2>
-                <p>Focado em criar soluções eficientes e inovadoras, com uma forte vontade de aprender e crescer em todas as etapas do desenvolvimento de software.</p>
+                <h2 id="headingIndex">Desenvolvedor Full Stack Júnior</h2>
+                <p id="pIndex">Focado em criar soluções eficientes e inovadoras, com uma forte vontade de aprender e crescer em todas as etapas do desenvolvimento de software.</p>
             </section>
         </div>
-        <footer id="footer" class="footer">
+        <footer class="footer">
             <p>&copy; code by Nuno Oliveira</p>
         </footer>
         
+        <script src="assets/js/main.js" defer>
+            
+        </script>
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

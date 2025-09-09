@@ -25,91 +25,25 @@
         <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
         <link rel="manifest" href="favicon_io/site.webmanifest">
-        <style>
-            .footer{
-                background-color:#343a40;
-                color: white;
-                text-align: center;
-                padding: 1rem 0;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-            }
-            html, body {
-                height: 100%;
-                margin: 0;
-                padding: 0;
-                font-family: 'Poppins', sans-serif;
-                background-color: #f8f9fa;
-                color: #333;
-            }
-            .intro {
-                text-align: center;
-                padding: 3rem 1rem;
-                max-width: 800px;
-                color: white;
-                margin: auto;
-            }
-            .intro h2 {
-                font-size: 2.5rem;
-                font-weight: 600;
-            }
-            .navbar {
-                background-color: #343a40;
-                padding: 1rem;
-            }
-            .navbar a {
-                color: white;
-                font-weight: 600;
-                transition: 0.3s;
-            }
-            .navbar a:hover {
-                color: #28a745;
-                text-decoration: underline;
-            }
-            .hero-image {
-                min-height: 85vh;
-                background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("hero2.jpg");
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                padding: 4rem 0;
-            }
-            .card{
-                background-color: #343a40;
-                color: white;
-                border-radius: 1rem;
-                overflow: hidden;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            }
-            .card-img-top {
-                max-height: 100px;
-                width: 100%;
-                object-fit: contain;
-                background-color: white;
-            }
-            .card:hover {
-                transform: translateY(-6px);
-                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-            }
-        </style>
+        <link rel="stylesheet" href="assets/css/main.css">
     </head>
 
-    <body>
+    <body class="projetos">
          <!-- Navbar -->
          <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="index_portfolio.html">Meu Portfólio</a>
+                <a class="navbar-brand" href="index_portfolio.html" id="anchorLogoIndex">Meu Portfólio</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index_portfolio.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="aboutMe.html">Sobre mim</a></li>
-                        <li class="nav-item"><a class="nav-link" href="projetos.html">Projetos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index_portfolio.html" id="liHome">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="aboutMe.html" id="liAboutMe">Sobre mim</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projetos.html" id="liProjects">Projetos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html" id="liContact">Contacto</a></li>
+                        <li class="nav-item"><button id="btnPT"><img src="assets/images/PT.png" alt="Portugal Flag">PT</button></li>
+                        <li class="nav-item"><button id="btnEN"><img src="assets/images/EN.png" alt="United Kindom Flag">En</button></li>
                     </ul>
                 </div>
             </div>
@@ -122,33 +56,33 @@
                         <!-- Projeto 1 -->
                         <div class="col-md-4 mb-4">
                             <div class="card h-100">
-                                <img src="guia-do-transporte.png" class="card-img-top" alt="Guia de Transporte">
+                                <img src="assets/images/guia-do-transporte.png" class="card-img-top" alt="Guia de Transporte">
                                 <div class="card-body">
-                                    <h5 class="card-title">Projeto Guia de Transporte</h5>
-                                    <p class="card-text">Protótipo de gestão de guias de transporte com integração ao Supabase para autenticação. Tecnologias utilizadas: HTML, CSS, JS, Bootstrap, SQL, Supabase.</p>
-                                    <a href="https://github.com/Nuno08/Guia-Transporte" class="btn btn-success" target="_blank" rel="noopener noreferrer">Ver Repositório</a>
+                                    <h5 class="card-title" id="headingCardTitle1">Projeto Guia de Transporte</h5>
+                                    <p class="card-text" id="pCard1">Protótipo de gestão de guias de transporte com integração ao Supabase para autenticação. Tecnologias utilizadas: HTML, CSS, JS, Bootstrap, SQL, Supabase.</p>
+                                    <a href="https://github.com/Nuno08/Guia-Transporte" class="btn btn-success" target="_blank" rel="noopener noreferrer" id="anchorGitHub1">Ver Repositório</a>
                                 </div>
                             </div>
                         </div>
                         <!-- Projeto 2 -->
                         <div class="col-md-4 mb-4">
                             <div class="card h-100">
-                                <img src="css.gif" class="card-img-top" alt="Projeto CSS">
+                                <img src="assets/images/css.gif" class="card-img-top" alt="Projeto CSS">
                                 <div class="card-body">
-                                    <h5 class="card-title">Projeto CSS</h5>
-                                    <p class="card-text">Animações em css. Tecnologias utilizadas: HTML, CSS.</p>
-                                    <a href="https://github.com/Nuno08/Desafio2" class="btn btn-success" target="_blank" rel="noopener noreferrer">Ver Repositório</a>
+                                    <h5 class="card-title" id="headingCardTitle2">Projeto CSS</h5>
+                                    <p class="card-text" id="pCard2">Animações em css. Tecnologias utilizadas: HTML, CSS.</p>
+                                    <a href="https://github.com/Nuno08/Desafio2" class="btn btn-success" target="_blank" rel="noopener noreferrer" id="anchorGitHub2">Ver Repositório</a>
                                 </div>
                             </div>
                         </div>
                         <!-- Projeto 3 -->
                         <div class="col-md-4 mb-4">
                             <div class="card h-100">
-                                <img src="Login.png" class="card-img-top" alt="Projeto Login">
+                                <img src="assets/images/Login.png" class="card-img-top" alt="Projeto Login">
                                 <div class="card-body">
-                                    <h5 class="card-title">Projeto Login</h5>
-                                    <p class="card-text">Protótipo de página de login. Tecnologias utilizadas: HTML, CSS, JS, PHP, Bootstrap, SQL, Supabase.</p>
-                                    <a href="https://github.com/Nuno08/Login" class="btn btn-success" target="_blank" rel="noopener noreferrer">Ver Repositório</a>
+                                    <h5 class="card-title" id="headingCardTitle3">Projeto Login</h5>
+                                    <p class="card-text" id="pCard3">Protótipo de página de login. Tecnologias utilizadas: HTML, CSS, JS, PHP, Bootstrap, SQL, Supabase.</p>
+                                    <a href="https://github.com/Nuno08/Login" class="btn btn-success" target="_blank" rel="noopener noreferrer" id="anchorGitHub3">Ver Repositório</a>
                                 </div>
                             </div>
                         </div>
@@ -156,10 +90,10 @@
             </section>
         </div>
         
-        <footer id="footer" class="footer">
+        <footer class="footer">
             <p>&copy; code by Nuno Oliveira</p>
         </footer>
-        
+        <script src="assets/js/main.js" defer></script>
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

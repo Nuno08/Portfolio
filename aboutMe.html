@@ -25,89 +25,25 @@
         <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
         <link rel="manifest" href="favicon_io/site.webmanifest">
-        <style>
-            .footer{
-                background-color:#343a40;
-                color: white;
-                text-align: center;
-                padding: 1rem 0;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-            }
-            html, body {
-                height: 100%;
-                margin: 0;
-                padding: 0;
-                font-family: 'Poppins', sans-serif;
-                background-color: #f8f9fa;
-                color: #333;
-            }
-            .intro {
-                text-align: center;
-                padding: 3rem 1rem;
-                max-width: 800px;
-                color: white;
-                margin: auto;
-            }
-            .intro h2 {
-                font-size: 2.5rem;
-                font-weight: 600;
-            }
-            .navbar {
-                background-color: #343a40;
-                padding: 1rem;
-            }
-            .navbar a {
-                color: white;
-                font-weight: 600;
-                transition: 0.3s;
-            }
-            .navbar a:hover {
-                color: #28a745;
-                text-decoration: underline;
-            }
-            .hero-image {
-                min-height: 85vh;
-                background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("hero2.jpg");
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                padding: 4rem 0;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            .img{
-                max-width: 300px;
-                width: 100%;
-                height: 100%;
-                border-radius: 50%;
-                max-height: 300px;
-            }
-            @media only screen and (max-width: 480px) {
-                body div div img{
-                    margin-bottom: 10px;
-                }    
-            }
-
-        </style>
+        <link rel="stylesheet" href="assets/css/main.css">
     </head>
 
-    <body>
+    <body class="aboutMe">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="index_portfolio.html">Meu Portfólio</a>
+                <a class="navbar-brand" href="index_portfolio.html" id="anchorLogoIndex">Meu Portfólio</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index_portfolio.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="aboutMe.html">Sobre mim</a></li>
-                        <li class="nav-item"><a class="nav-link" href="projetos.html">Projetos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index_portfolio.html" id="liHome">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="aboutMe.html" id="liAboutMe">Sobre mim</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projetos.html" id="liProjects">Projetos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html" id="liContact">Contacto</a></li>
+                        <li class="nav-item"><button id="btnPT"><img src="assets/images/PT.png" alt="Portugal Flag">PT</button></li>
+                        <li class="nav-item"><button id="btnEN"><img src="assets/images/EN.png" alt="United Kindom Flag">En</button></li>
                     </ul>
                 </div>
             </div>
@@ -117,21 +53,21 @@
                 <div class="row align-items-center">
                     <div class="col-12 col-md-8">
                         <section class="intro">
-                            <h2>Sobre mim</h2>
-                            <p>Desenvolvedor Full Stack júnior com formação técnica e superior em Tecnologias e Programação de Sistemas de Informação. Tenho experiência prática em HTML, CSS, JavaScript, PhP, SQL e React, adquirida em estágios e projetos próprios. No front-end, foco em interfaces funcionais e responsivas; no back-end, trabalho com APIs, autenticação e bases de dados relacionais.
-                                Sou autodidata, adaptável e motivado por desafios. Busco oportunidades como júnior ou estagiário para aplicar os meus conhecimentos, aprender com profissionais experientes e evoluir dentro da área.</p>
+                            <h2 id="headingAboutMe">Sobre mim</h2>
+                            <p id="pAboutMe">Desenvolvedor Full Stack Júnior com formação técnica e superior em Tecnologias e Programação de Sistemas de Informação. Tenho experiência prática em desenvolvimento front-end e back-end, adquirida por meio de estágios, projetos próprios e estudos contínuos. Trabalho com HTML, CSS, JavaScript, React, Bootstrap, Kotlin, C, C++ e Figma na construção de interfaces funcionais e responsivas. No back-end, utilizo PHP, Node.js, Java, SQL e Supabase, com foco em criação de APIs, autenticação e integração com bancos de dados relacionais. Também tenho familiaridade com ferramentas como Postman para testes de APIs e Git para versionamento de código. Sou autodidata, adaptável e movido por desafios. 
+                                Busco oportunidades como desenvolvedor júnior ou estagiário para aplicar os meus conhecimentos, colaborar com profissionais experientes e seguir evoluindo na área.</p>
                         </section>
                     </div>
                    <div class="col-12 col-md-4 text-center">
-                        <img class="img" src="Foto.jpg" alt="Foto">
+                        <img class="img" src="assets/images/Foto.jpg" alt="Foto">
                     </div>
                 </div>
             </div>
         </div>
-        
-        <footer id="footer" class="footer">
+        <footer class="footer">
             <p>&copy; code by Nuno Oliveira</p>
         </footer>
+        <script src="assets/js/main.js" defer></script>
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
